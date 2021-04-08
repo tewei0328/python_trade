@@ -1,1 +1,2 @@
-getLastSIDMatch('20210408','TX04')
+import function
+function.getLastSIDMatch('20210408','TX04')
