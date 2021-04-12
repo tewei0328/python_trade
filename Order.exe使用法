@@ -9,3 +9,5 @@
 #7. LMT / MKT
 #8. 0:非當沖 1:當沖
 取消: Order.exe Simulator Delete 單號
+
+Order.exe Capital_Future TXO17700D1 B 1 1 ROD LMT 0
