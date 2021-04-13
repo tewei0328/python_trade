@@ -15,7 +15,7 @@ ExecPath="C:/gorder/CMD/"
 #6. ROD / IOC / FOK
 #7. LMT / MKT
 #8. 0:非當沖 1:當沖
-def OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType):
+def OrderLMT(BrokerID,Product,BS,Price,Qty,RodIocFok,LmtMkt):
     print([ExecPath+"Order.exe",BrokerID,Product,BS,Price,Qty,RodIocFok,LmtMkt, '0'])
     OrderNo=subprocess.check_output([ExecPath+"Order.exe",BrokerID,Product,BS,Price,Qty,RodIocFok,LmtMkt,'0']).decode('big5').strip('\r\n')
     return OrderNo
