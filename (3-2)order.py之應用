@@ -17,7 +17,8 @@ Order.exe Capital_Future TXO17700D1 B 1 1 ROD LMT 0
 #def OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType):
 #print([ExecPath+"Order.exe",BrokerID,Product,BS,Price,Qty,'0',OrderType])
 #以上為群益證券, 只有6個參數(參考書本), 而群益期貨略有不同, 有8個參數
-OrderNo=OrderLMT('Capital_Future', 'TXO17700D1', 'B', '1', '1', 'ROD', 'LMT', '0')
+import order
+OrderNo=order.OrderLMT('Capital_Future', 'TXO17700D1', 'B', '1', '1', 'ROD', 'LMT', '0')
 
 #order.py之應用(2)成交查詢
-GetAccount('Capital_Future', OrderNo)
+order.GetAccount('Capital_Future', OrderNo)
