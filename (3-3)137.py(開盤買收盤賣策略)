@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 # 載入相關套件
-import datetime,function,indicator
+# import datetime,function,indicator
+import datetime,function
 import sys
 
 # 取得當天日期
