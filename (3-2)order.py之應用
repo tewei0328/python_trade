@@ -1,1 +1,17 @@
-(3-2)order.py之應用
+群益期貨
+下單: Order.exe #1 #2 #3 #4 #5 #6 #7 #8
+#1. Capital_Future
+#2. ProductId(ex TX00, MTX00)
+#3. B: Buy, S: Sell
+#4. Price
+#5. Qty(口數)
+#6. ROD / IOC / FOK
+#7. LMT / MKT
+#8. 0:非當沖 1:當沖
+取消: Order.exe Simulator Delete 單號
+
+#記得要先在Gorder中切換帳號至有放保帳金的帳號, order.exe會針對Gorder左上角選定的帳號下單
+Order.exe Capital_Future TXO17700D1 B 1 1 ROD LMT 0
+
+#order.py之應用
+OrderNo=OrderLMT('Capital_Future', 'TXO17700D1', 'B', '1', '1', 'ROD', 'LMT', '0')
