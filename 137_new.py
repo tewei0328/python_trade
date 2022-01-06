@@ -1,3 +1,4 @@
+# new: BrokerID -> 'Capital_Future'
 # -*- coding: UTF-8 -*-
 # 載入相關套件
 # import datetime,function,indicator
