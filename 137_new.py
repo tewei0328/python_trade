@@ -1,4 +1,5 @@
-# new: BrokerID -> 'Capital_Future'
+# new1: BrokerID -> 'Capital_Future'
+# new2: time=datetime.datetime.strptime(i[0],'%Y/%m/%d %H:%M:%S.%f')
 # -*- coding: UTF-8 -*-
 # 載入相關套件
 # import datetime,function,indicator
@@ -25,7 +26,8 @@ for i in function.getSIDMatch(Date,Sid):
     print("i:", i)
     print("i[0]:", i[0])
     #time=datetime.datetime.strptime(Date+i[0],'%Y%m%d%H:%M:%S.%f')
-    time=datetime.datetime.strptime(i[0],'%Y%m%d%H:%M:%S.%f')
+    #time=datetime.datetime.strptime(i[0],'%Y%m%d%H:%M:%S.%f')
+    time=datetime.datetime.strptime(i[0],'%Y/%m/%d %H:%M:%S.%f')
     price=float(i[2])
     ask=float(i[5])
     bid=float(i[6])
