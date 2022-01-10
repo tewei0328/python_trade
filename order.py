@@ -1,12 +1,13 @@
 # -*- coding: UTF-8 -*-
-# tewei: new ver. only for future/option)
-# tewei new2:('LMT')OrderNo=OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType,'LMT')
+# tewei new1: ver. only for future/option)
+# tewei new2:('LMT') OrderNo=OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType,'LMT')
+# tewei new3:('0') print([ExecPath+"Order.exe",BrokerID,Product,BS,Price,Qty,RodIocFok,LmtMkt, '0'])
 
 #載入相關套件
 import subprocess,time
 
 #下單子程式放置位置
-ExecPath="C:/gorder/CMD/"
+#ExecPath="C:/gorder/CMD/"
 
 #送出交易委託(new ver. only for future/option)
 #1. Capital_Future
@@ -37,7 +38,7 @@ def GetAccount(BrokerID,OrderNo):
     
 #下單並取得帳務回傳
 def Order(BrokerID,Product,BS,Price,Qty,OrderType):
-    OrderNo=OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType,'LMT')  # tewei new2
+    OrderNo=OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType,'LMT')
     if OrderNo[0:4]!='Fail':
         while 1:
             OrderInfo=GetAccount(BrokerID,OrderNo)
