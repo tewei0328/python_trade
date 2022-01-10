@@ -1,5 +1,7 @@
 # -*- coding: UTF-8 -*-
 # tewei: new ver. only for future/option)
+# tewei new2:('LMT')OrderNo=OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType,'LMT')
+
 #載入相關套件
 import subprocess,time
 
@@ -35,7 +37,7 @@ def GetAccount(BrokerID,OrderNo):
     
 #下單並取得帳務回傳
 def Order(BrokerID,Product,BS,Price,Qty,OrderType):
-    OrderNo=OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType)
+    OrderNo=OrderLMT(BrokerID,Product,BS,Price,Qty,OrderType,'LMT')  # tewei new2
     if OrderNo[0:4]!='Fail':
         while 1:
             OrderInfo=GetAccount(BrokerID,OrderNo)
