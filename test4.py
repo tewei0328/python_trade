@@ -1,5 +1,7 @@
 # -*- coding: UTF-8 -*-
 # tewei New1: ('ROD') OrderInfo=order.Order(BrokerID,Sid1,'B',1,OrderNum,'ROD')
+# tewei new2: ('1')   OrderInfo=order.Order(BrokerID,Sid1,'B','1',OrderNum,'ROD')
+
 # 載入相關套件
 # import datetime,function,indicator
 import datetime,function
@@ -43,7 +45,7 @@ for i in function.getSIDMatch(Date,Sid):
     OrderTime=time
     OrderPrice=price
     # 若要實單交易 可以將註解取消
-    OrderInfo=order.Order(BrokerID,Sid1,'B',1,OrderNum,'ROD')
+    OrderInfo=order.Order(BrokerID,Sid1,'B','1',OrderNum,'ROD')
     #OrderPrice=OrderInfo[0][4]
     #OrderTime=datetime.datetime.strptime(OrderInfo[0][6],'%Y/%m/%d %H:%M:%S')
     print(OrderTime,"@2 Order Buy Price:",OrderPrice,"Success!")
