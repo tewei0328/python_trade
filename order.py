@@ -7,7 +7,7 @@
 import subprocess,time
 
 #下單子程式放置位置
-#ExecPath="C:/gorder/CMD/"
+ExecPath="C:/gorder/CMD/"
 
 #送出交易委託(new ver. only for future/option)
 #1. Capital_Future
